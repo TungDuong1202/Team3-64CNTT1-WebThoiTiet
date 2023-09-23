@@ -55,7 +55,7 @@ function checkPassword(input,min,max){
 }
 function checkMatchPassword(passwordInput,confirmPasswordInput){
     if(passwordInput.value !== confirmPasswordInput.value){
-        showError(confirmPasswordInput,"Mật khẩu không trùng khớp!");
+        showError(confirmPasswordInput,"Mật khẩu không trùng khớp!!");
         return true;
     }
     return false;

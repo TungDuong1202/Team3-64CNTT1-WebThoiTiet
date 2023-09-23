@@ -19,7 +19,7 @@ body{
 .container{ 
     width: 400px;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: white;
     display: block;
     padding: 40px;  
