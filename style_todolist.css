@@ -10,12 +10,13 @@
     min-height: 100vh;
     background: white;
     padding: 10px;
-    background-image: url(img/background.jpg);
+    /* background-image: url(img/background.jpg); */
     background-size: cover;
+    background: transparent;
 }
 .todo-app{
     width: 100%;
-    max-width: 540px;
+    max-width: 600px;
     background: linear-gradient(-45deg, #e254ff,#7abdfc);
     margin: 10px auto 20px;
     padding: 4px 30px 70px;

@@ -7,20 +7,24 @@ body{
     font-family: sans-serif;
     background-image: url(img/background.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .card {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
+    height: 100%;
     background: linear-gradient(to top, #2980B9, #87CEEB);
-    margin: 100px auto 0;
+    margin: 40px 0 0 200px;
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 40px 35px 25px;
     text-align: center;
-    float: right;
+    float: left;
+    position: relative;
 }
 .search {
     width: 100%;
-    padding: 10px 20px;
+    margin-top: 12px;
+    padding: 18px 20px;
     border: none;
     outline: none;
     border-radius: 15px 0 15px 0;
@@ -31,7 +35,7 @@ body{
 .content {
     text-align: center;
     color: white;
-    margin: 40px;
+    margin: 30px;
     transition: 0.4s;
 }
 
@@ -44,7 +48,7 @@ body{
 .short-dec {
     font-size: 40px;
     font-weight: bold;
-    margin: 30px;
+    margin: 15px;
 }
 
 .more-dec{
@@ -66,10 +70,16 @@ body{
 }
 
 .todolist{
-    width: 72.5%;
-    height: 1000px;
-    margin: 0;
-    padding: 0;
+    width: 120%;
+    top : -20px;
+    left: 600px; 
+    padding: 30;
+    position: absolute;
+    height: 400px;
+    font-size: 22px;
+    color: #060101;
+    line-height: 40px;
+    text-align: center;
 }
 
 .content{
