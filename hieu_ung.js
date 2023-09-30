@@ -5,7 +5,7 @@ var value = document.querySelector('.value')
 var shortDec = document.querySelector('.short-dec')
 var visibility = document.querySelector('.visibility span')
 var wind = document.querySelector('.wind span')
-var sun = document.querySelector('.sun span')
+var smog = document.querySelector('.smog span')
 var content = document.querySelector('.content')
 const searchBox = document.querySelector('.card input') 
 async function checkWeather(cityy){
@@ -17,8 +17,8 @@ async function checkWeather(cityy){
         city.innerText = data.name + ','
         country.innerText = data.sys.country
         visibility.innerText = data.visibility + 'm'
-        wind.innerText = data.wind.speed + 'm/s'
-        sun.innerText = data.main.humidity + '%'
+        wind.innerText = data.wind.speed + ' m/s'
+        smog.innerText = data.main.humidity + '%'
         value.innerText = Math.round((data.main.temp - 273.15)) + '°C'
 
         if(data.weather[0].main == "Clouds"){
@@ -36,6 +36,7 @@ async function checkWeather(cityy){
         else if(data.weather[0].main == "Mist"){
             shortDec.src = "img/mist.png";
         }
+        document.querySelector('.content').style.display = "block";
     }
     else{
         content.classList.add('hide')

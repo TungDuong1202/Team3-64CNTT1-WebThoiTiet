@@ -5,6 +5,8 @@
 }
 body{
     font-family: sans-serif;
+    background-image: url(img/background.jpg);
+    background-size: cover;
 }
 .card {
     width: 90%;
@@ -61,4 +63,19 @@ body{
 .hide{
     visibility: hidden;
     opacity: 0;
+}
+
+.todolist{
+    width: 72.5%;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: none;
+}
+
+.logout{
+    text-align: end;
 }
