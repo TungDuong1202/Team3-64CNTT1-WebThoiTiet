@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: linear-gradient(-45deg, #e254ff,#7abdfc);
+    margin: 10px auto 20px;
+    padding: 4px 30px 70px;
+    border-radius: 20px;
+}
+.todo-app h2{
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dad0fc;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex:1;
+    border: none;
+    outline:none; 
+    background: transparent;        /*màu trong suốt*/
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px ;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;                 /*thay đổi hình dạng con trỏ*/
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;              
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-image: url(icon/unchecked.png);
+    background-size: cover;                        /* tự động chỉnh background phù hợp với khung hình */
+    background-position: center;
+    top: 10px;
+    left: 10px;
+}
+ul li.checked{
+    color: #6e0d0d;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(icon/checked.png);
+}
+ul li span{
+    position: absolute;
+    right : 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #060101;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50% ;
+}
+ul li span:hover{
+    background: #d97dfd;
+}
