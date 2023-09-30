@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App - Easy Tutorial</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- phan thoi tiet -->
     <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="'fasle">
-            <button><img src="img/search.png"></button>
-        <div class="error">
-            <p>Invalid city name</p>
-        </div>
-
-        </div>
-        <div class="weather">
-            <img src="img/rain.png" class="weather-icon">
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">New York</h2>
-            <div class="details">
-                <div class="col">
-                    <img src="img/humidity.png">
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
+        <input type="text" class="search" placeholder="Nhập tên thanh phố(không dấu)">
+        <div class="content">
+            <h1 class="capital">
+                <span class="city"></span>
+                <span> </span>
+                <span class="country"></span>
+            </h1>
+            <div class="temperature">
+                <span class="value"> </span>
+            </div>
+            <img src="img/clear.png" class="short-dec">
+            <div class="more-dec">
+                <div class="visibility">
+                    <i class="fa-solid fa-eye"></i>
+                    <span></span>
                 </div>
-                <div class="col">
-                    <img src="img/wind.png">
-                    <div>
-                        <p class="wind">15 km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span></span>
+                </div>
+                <div class="sun">
+                    <i class="fa-solid fa-sun"></i>
+                    <span></span>
                 </div>
             </div>
         </div>
