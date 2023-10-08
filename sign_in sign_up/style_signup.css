@@ -17,8 +17,7 @@ body{
     align-items: center;
 }
 .container{ 
-    width: 400px;
-    height:500px;
+    width: 390px;
     border:2px solid black;
     border-radius: 20px;
     background-color: transparent;
@@ -38,7 +37,6 @@ body{
     height: 50px;
     font-size: 16px;
     outline:none;
-    background: transparent;
     border: 2px solid black;
     padding: 0 0 0 30px;
     border-radius: 20px;
