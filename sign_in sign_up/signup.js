@@ -1,5 +1,5 @@
 var email= document.querySelector('#email');
-var sdt= document.querySelector('#sdt');
+var username= document.querySelector('#tendangnhap');
 var password= document.querySelector('#password');
 var confirmPassword= document.querySelector('#confirm-password');
 var form = document.querySelector('form');
@@ -62,7 +62,7 @@ function checkMatchPassword(passwordInput,confirmPasswordInput){
 }
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    let isEmptyError = checkEmptyError([email, sdt, password, confirmPassword]);
+    let isEmptyError = checkEmptyError([email, username, password, confirmPassword]);
     checkEmail(email);
     let isPasswordLengthError = checkPassword(password,5,13);
     let iscfPasswordLengthError = checkPassword(password,5,13);

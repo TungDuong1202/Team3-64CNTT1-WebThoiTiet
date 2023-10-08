@@ -2,15 +2,9 @@
     --success-color: #2691d9;
     --error-color: #e74c3c;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body{
     height: 100vh;
-    background: white;
+    background: linear-gradient(120deg,#3ca7ee,#9b408f);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -18,10 +12,9 @@ body{
 }
 .container{ 
     width: 400px;
-    height:500px;
-    border:2px solid black;
+    border: none;
     border-radius: 20px;
-    background-color: transparent;
+    background-color: white;
     display: block;
     padding: 40px;  
 }
@@ -31,44 +24,38 @@ body{
 .form-control{
     width: 100%;    
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .form-control input{
-    width: 100%;
-    height: 50px;
+    width: 80%;
+    height: 30px;
     font-size: 16px;
+    border:none;
     outline:none;
-    background: transparent;
-    border: 2px solid black;
-    padding: 0 0 0 30px;
-    border-radius: 20px;
+    border-bottom: 2px solid black;
+    padding:0  0 0 10px;
+
 }
-.form-control ion-icon{
-    position: absolute;
-    right:20px;
-    top: 15px;
-    font-size: 20px;
+.form-control img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
 }
 .form-control span{
     position: absolute;
-    border: 2px solid var(--success-color);
+    border-bottom: 2px solid var(--success-color);
     top: 38px;
-    left: -10000px;
+    left: 0;
     width: 0%;
+    transition: 0.1s;
 }
-.form-control input:focus ~ span{
-    width: 100%;
-    border-radius: 20px;
-    height: 50px;
-    margin-top: -38px;
-    left: 0px;
-    
-}
-.form-control.error small{
-    color: var(--error-color)
-}
-.form-control.error input{
-    border-bottom: 2px solid var(--error-color);
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    padding-top: 5px;
+    margin: 17px 0 17px 0;
 }
 .btn-submit{
     width: 100%;
@@ -84,19 +71,18 @@ body{
     cursor: pointer;
     transition: 0.3s;
 }
-
 .btn-submit:hover{
     background: #08609a;
 }
-.signup-link{
+.signin-link{
     margin-top: 15px;
     text-align: center;
 }
-.signup-link a{
+.signin-link a{
     color: var(--success-color);
     text-decoration: none;
     cursor: pointer;
 }
-.signup-link a:hover{
+.signin-link a:hover{
     text-decoration: underline;
 }
