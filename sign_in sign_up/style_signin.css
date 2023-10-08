@@ -9,7 +9,10 @@
 }
 body{
     height: 100vh;
-    background: white;
+    background: url(https://i.pinimg.com/564x/78/b8/28/78b8283d2b53832fac96501ccfbc6594.jpg?fbclid=IwAR3nIT2-WFfGQxQdk7U6zTHFzlAY9reYfqiLJ_x0vruo7RbW402Hw2CEYGI);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -17,9 +20,10 @@ body{
 }
 .container{ 
     width: 360px;
-    border: 2px solid black;
+    border: 2px solid rgba(0,0,0,0.5);
     border-radius: 20px;
-    background-color: transparent;
+    background:  rgba(230, 227, 227, 0.56);;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
     display: block;
     padding: 40px;  
 }
@@ -36,6 +40,7 @@ body{
     height: 50px;
     font-size: 16px;
     border: 2px solid black;
+    background: rgba(255, 255, 255, 0.7); ;
     border-radius: 20px;
     outline:none;
     padding: 0 0 0 20px;
