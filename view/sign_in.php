@@ -1,3 +1,26 @@
+<?php
+    session_start();
+    ob_start();
+    require "../model/database.php";
+    require "../model/user.php";
+    if(isset($_POST['signin']) && ($_POST['signin'])){
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        $role = checkuser($user,$pass);
+        if($role!= -1){$_SESSION['role'] = $role;}
+        
+        if($role==1){
+            header("Location: giao_dien_admin.html");
+        }
+        elseif($role == -1){
+            $txt_error = "Tên đăng nhập hoặc mật khẩu không tồn tại!";
+        }
+        else{
+            header("Location: giao_dien_user.html");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,26 +33,32 @@
 </head>
 <body>
     <div class="container">
-        <form class="form-login">
+        <form action="" method="post" class="form-login">
             <h1>Đăng nhập</h1>
             <div class="form-control">
                 <ion-icon name="person-circle-outline"></ion-icon>
-                <input id='username' type="text" placeholder="Tên đăng nhập">
+                <input id='username' name="username" type="text" placeholder="Tên đăng nhập">
                 <small></small>
                 <span></span>
             </div>
 
             <div class="form-control">
                 <ion-icon name="lock-closed"></ion-icon>
-                <input id="password" type="password" placeholder="Mật khẩu">
+                <input id="password" name="password" type="password" placeholder="Mật khẩu">
                 <small></small>
                 <span></span>
             </div>
 
-            <button type="submit" class="btn-submit">Đăng nhập</button>
+            <input type="submit" name="signin" class="btn-submit" value="Đăng nhập"></input>
 
             <div class="signin-link">Bạn chưa có tài khoản? <a href="sign_up.php">Đăng kí ngay</a></div>
+            <br>
+            <?php
+                if(isset($txt_error)&&($txt_error!=""))
+                echo "<font color = 'red'>".$txt_error."</font>";
+            ?>
         </form>
+
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

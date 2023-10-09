@@ -12,8 +12,8 @@
     <div class="container">
         <h1 class="title1">Xem thời tiết của thế giới với</h1>
         <h1 class="title2">Weathers!</h1>
-        <button type="submit" class="btn-submit1"><a href="sign_in sign_up/sign_up.html">Đăng ký</a></button>
-        <button type="submit" class="btn-submit2"><a href="sign_in sign_up/sign_in.html">Đăng nhập</a></button>
+        <button type="submit" class="btn-submit1"><a href="sign_up.php">Đăng ký</a></button>
+        <button type="submit" class="btn-submit2"><a href="sign_in.php">Đăng nhập</a></button>
     </div>
 </body>
 </html>

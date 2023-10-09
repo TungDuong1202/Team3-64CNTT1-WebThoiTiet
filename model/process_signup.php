@@ -1,12 +1,12 @@
 <?php
     $email = $_POST['email'];
     $user = $_POST['username'];
-    $password = $_POST['password'];
+    $pass = $_POST['password'];
     $password_confirm = $_POST['confirm-password'];
     if(empty($user)){
         die ("Vui lòng nhập tên đăng nhập!");
     }
-    if(strlen($password) < 6){
+    if(strlen($pass) < 6){
         echo "Mật khẩu phải chứa ít nhất 6 ký tự.<br>";
         die ("Vui lòng nhập lại!");
     }
@@ -19,7 +19,7 @@
         echo "Mật khẩu phải chứa ít nhất một chữ số.<br>";
         die ("Vui lòng nhập lại!");
     }
-    if($password !== $password_confirm){
+    if($pass !== $password_confirm){
         echo "Mật khẩu không giống nhau.<br>";
         die ("Vui lòng nhập lại!");
     }
@@ -27,11 +27,10 @@
         echo "Tên đăng nhập không được quá 20 ký tự.<br>";
         die ("Vui lòng nhập lại!");
     }
-    if(strlen($password) > 50){
+    if(strlen($pass) > 50){
         echo "Mật khẩu không được quá 50 ký tự.<br>";
         die ("Vui lòng nhập lại!");
     }
-    $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
     require 'database.php';
     $checkEmailQuery = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($checkEmailQuery);
@@ -43,7 +42,7 @@
     if ($resultuser->num_rows > 0) {
         die ("Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.");
     }
-    $sql = "INSERT INTO users (`username`,`email`,`password`) values ('$user','$email','$password_hash')";
+    $sql = "INSERT INTO users (`username`,`email`,`password`) values ('$user','$email','$pass')";
     if($conn->query($sql)===TRUE){
         header("Location: signup_success.html");
         exit();

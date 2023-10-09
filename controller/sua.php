@@ -1,5 +1,8 @@
    <?php
-        require "../sign_in sign_up/database.php"
+        session_start();
+        ob_start();
+        if(isset($_SESSION['role']) && $_SESSION['role'] == 1)
+        require "../model/database.php";
    ?>
     <?php
        if(isset($_GET["id"])){
@@ -17,6 +20,7 @@
             if($role == ""){echo "Vui lòng nhập quyền admin!<br>";}
 
             if($username != "" && $email != "" && $role != ""){
+                $connection = mysqli_connect("$host", "$username", "$password", "$dbname");
                 $sql = "UPDATE users set username = '$username', email = '$email', `role` = '$role' where id = $id";
                 $qr = mysqli_query($connection,$sql);
                 header("location: quan_ly_db.php");

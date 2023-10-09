@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Đăng ký</h1> 
-        <form action="process_signup.php" method="post">          
+        <form action="../model/process_signup.php" method="post">          
             <div class="form-control">
                 <ion-icon name="person-circle-outline"></ion-icon>
                 <input id="tendangnhap" name="username" type="text" placeholder="Tên đăng nhập">
@@ -43,7 +43,7 @@
 
             <button type="submit" class="btn-submit">Đăng ký</button>
 
-            <div class="signup-link">Bạn đã có tài khoản? <a href="sign_in.html">Đăng nhập</a></div>
+            <div class="signup-link">Bạn đã có tài khoản? <a href="sign_in.php">Đăng nhập</a></div>
         </form>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
