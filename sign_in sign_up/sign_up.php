@@ -12,31 +12,31 @@
 <body>
     <div class="container">
         <h1>Đăng ký</h1> 
-        <form action="#">          
+        <form action="process_signup.php" method="post">          
             <div class="form-control">
                 <ion-icon name="person-circle-outline"></ion-icon>
-                <input id="tendangnhap" type="text" placeholder="Tên đăng nhập">
+                <input id="tendangnhap" name="username" type="text" placeholder="Tên đăng nhập">
                 <small></small>
                 <span></span>
             </div>
 
             <div class="form-control">
                 <ion-icon name="mail"></ion-icon>
-                <input id="email" type="email" placeholder="Nhập Email">
+                <input id="email" name="email" type="email" placeholder="Nhập Email">
                 <small></small>
                 <span></span>
             </div>
 
             <div class="form-control">
                 <ion-icon name="lock-closed"></ion-icon>
-                <input id="password" type="password" placeholder="Nhập mật khẩu">
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu">
                 <small></small>
                 <span></span>
             </div>
 
             <div class="form-control ">
                 <ion-icon name="key"></ion-icon>
-                <input id="confirm-password" type="password" placeholder="Xác nhận mật khẩu">
+                <input id="confirm-password" name="confirm-password" type="password" placeholder="Xác nhận mật khẩu">
                 <small></small>
                 <span></span>
             </div>
@@ -46,7 +46,6 @@
             <div class="signup-link">Bạn đã có tài khoản? <a href="sign_in.html">Đăng nhập</a></div>
         </form>
     </div>
-    <script src="signup.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
