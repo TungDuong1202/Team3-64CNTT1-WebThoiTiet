@@ -96,11 +96,13 @@ body{
 .signup-link{
     margin-top: 15px;
     text-align: center;
+    font-family: 'Poppins', 'Arial';
 }
 .signup-link a{
     color: var(--success-color);
     text-decoration: none;
     cursor: pointer;
+    font-family: 'Poppins', 'Arial';
 }
 .signup-link a:hover{
     text-decoration: underline;

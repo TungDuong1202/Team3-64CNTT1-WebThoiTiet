@@ -13,11 +13,12 @@
     /* background-image: url(img/background.jpg); */
     background-size: cover;
     background: transparent;
+
 }
 .todo-app{
     width: 100%;
     max-width: 600px;
-    background: linear-gradient(-45deg, #e254ff,#7abdfc);
+    background: linear-gradient(-45deg, #dfefff,#4ebafc);
     margin: 10px auto 20px;
     padding: 4px 30px 70px;
     border-radius: 20px;
@@ -36,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #dad0fc;
+    background: #abdcff;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -47,16 +48,18 @@ input{
     outline:none; 
     background: transparent;        /*màu trong suốt*/
     padding: 10px;
+    font-family: 'Poppins', 'Arial';
 }
 button{
     border: none;
     outline: none;
     padding: 16px 50px ;
-    background: #ff5945;
+    background: #41a9cf;
     color: #fff;
     font-size: 16px;
     cursor: pointer;                 /*thay đổi hình dạng con trỏ*/
     border-radius: 40px;
+    font-family: 'Poppins','Arial';
 }
 ul li{
     list-style: none;
@@ -65,6 +68,7 @@ ul li{
     user-select: none;
     cursor: pointer;              
     position: relative;
+    font-family: 'Poppins', 'Arial';
 }
 ul li::before{
     content: '';
@@ -97,5 +101,5 @@ ul li span{
     border-radius: 50% ;
 }
 ul li span:hover{
-    background: #d97dfd;
+    background: #3eacfb;
 }
