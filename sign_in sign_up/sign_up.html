@@ -41,7 +41,7 @@
                 <span></span>
             </div>
 
-            <button type="submit" class="btn-submit">Đăng kí</button>
+            <button type="submit" class="btn-submit">Đăng ký</button>
 
             <div class="signup-link">Bạn đã có tài khoản? <a href="sign_in.html">Đăng nhập</a></div>
         </form>
