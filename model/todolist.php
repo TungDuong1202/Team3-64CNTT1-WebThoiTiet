@@ -31,4 +31,25 @@
         $sql = "DELETE FROM todo_list WHERE id = '$id' AND id_ghichu = '$id_ghichu'";
         return $conn->query($sql);
     }
+    // Xử lý yêu cầu từ phía client
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        // Lấy danh sách tasks
+        echo json_encode(gettasks($_SESSION['id'])); // Điều chỉnh phương thức xác thực
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Thêm task mới
+        $data = json_decode(file_get_contents('php://input'), true);
+        $task = $data['todo_list'];
+        echo json_encode(['success' => addtasks($_SESSION['id'], $tasks)]);
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+        // Cập nhật trạng thái hoàn thành của task
+        $data = json_decode(file_get_contents('php://input'), true);
+        $id_ghichu = $data['id_ghichu'];
+        echo json_encode(['success' => updatetasks($_SESSION['id'], $id_ghichu)]);
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+        // Xóa task
+        $data = json_decode(file_get_contents('php://input'), true);
+        $taskId = $data['id'];
+        echo json_encode(['success' => deletetasks($_SESSION['id'], $id_ghichu)]);
+    }
+
 ?>

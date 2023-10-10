@@ -22,14 +22,14 @@
             if($username != "" && $email != "" && $role != ""){
                 $connection = mysqli_connect("$host", "$username", "$password", "$dbname");
                 $sql = "UPDATE users set username = '$username', email = '$email', `role` = '$role' where id = $id";
-                $qr = mysqli_query($connection,$sql);
+                $qr = mysqli_query($conn,$sql);
                 header("location: quan_ly_db.php");
             }
         }
    ?>
     <?php
         $sql = "SELECT * FROM users where id = $id";
-        $qr = mysqli_query($connection,$sql);
+        $qr = mysqli_query($conn,$sql);
         $rows = mysqli_fetch_array($qr);
     ?>
    <form action="" method="post">
