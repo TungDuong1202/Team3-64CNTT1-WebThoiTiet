@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #d7efff;
+}
+.tieude{
+    text-align: center;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+button{
+    width: 80px;
+    height: 40px;
+    background: rgb(114, 208, 248);
+}
+button a{
+    background:transparent;
+    text-decoration: none;
+    color: black;
+    font-family: 'Arial';
+    font-size: 18px;
+}
+.input-box{
+    position: relative;
+    border: 2px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 100%;
+    background: rgb(228, 243, 253);
+    margin-left: 120px;
+    text-align: center;
+}
+input{
+    flex:1;
+    border: none;
+    outline:none; 
+    background: transparent;        /*màu trong suốt*/
+    padding: 10px;
+    font-family: 'Poppins', 'Arial';
+}
+button{
+    border: none;
+    outline: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;                 /*thay đổi hình dạng con trỏ*/
+    font-family: 'Poppins','Arial';
+}
+.container .nut1{
+    background: rgb(203, 200, 200);
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    width: 40px;
+    height: 20px;
+}
+.container .nut2{
+    background: rgb(203, 200, 200);
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    width: 40px;
+    height: 20px;
+}
