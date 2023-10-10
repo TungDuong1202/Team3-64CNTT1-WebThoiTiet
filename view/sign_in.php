@@ -1,14 +1,18 @@
 <?php
     session_start();
     ob_start();
-    require "../model/database.php";
-    require "../model/user.php";
+    include "../model/database.php";
+    include "../model/user.php";
     if(isset($_POST['signin']) && ($_POST['signin'])){
         $user = $_POST['username'];
         $pass = $_POST['password'];
         $role = checkuser($user,$pass);
-        if($role!= -1){$_SESSION['role'] = $role;}
-        
+        $id = getid($user,$pass);
+        if($role!= -1){
+            $_SESSION['role'] = $role;
+            $_SESSION['id'] = $id;
+        }
+
         if($role==1){
             header("Location: giao_dien_admin.html");
         }
