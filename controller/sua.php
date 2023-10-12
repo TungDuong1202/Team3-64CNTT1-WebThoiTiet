@@ -1,3 +1,4 @@
+   <link rel="stylesheet" href="sua.css">
    <?php
         session_start();
         ob_start();
@@ -32,10 +33,10 @@
         $qr = mysqli_query($conn,$sql);
         $rows = mysqli_fetch_array($qr);
     ?>
-   <form action="" method="post">
-    <label>username</label><input type="text" name="username" value="<?php echo $rows["username"]?>"/> <br/><br/>
-    <label>email</label><input type="text" name="email" value="<?php echo $rows["email"]?>"/> <br/><br/>
-    <label>role</label><input type="text" name="role" value="<?php echo $rows["role"]?>"/> <br/><br/>
-    <input type="submit" name="sua" value="Sua">
+   <form action="" method="post" class="container">
+    <label>Username</label><input type="text" name="username" value="<?php echo $rows["username"]?>"/> <br/><br/>
+    <label>Email</label><input type="text" name="email" value="<?php echo $rows["email"]?>"/> <br/><br/>
+    <label>Role</label><input type="text" name="role" value="<?php echo $rows["role"]?>"/> <br/><br/>
+    <input type="submit" name="sua" value="Sửa">
     
 </form>

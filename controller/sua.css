@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background:rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    background: transparent;
+    display: block;
+    padding: 40px;  
+    top: -50px;
+    position: relative;
+    align-items: center;
+    border: 2px solid black;
+}
+label{
+    font-size: 30px;
+    padding-right: 20px;
+}
+.container input{
+    width: 60%;
+    height: 35px;
+    font-size: 20px;
+}
+
