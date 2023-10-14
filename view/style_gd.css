@@ -84,6 +84,21 @@ body{
     display: none;
 }
 
-.logout{
-    text-align: end;
+.logout button{
+    width: 80px;
+    height: 35px;
+    background: rgb(152, 223, 243);
+    border: 1.5px solid black;
+    right: 0;
+    position: absolute;
+}
+.logout button a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Arial';
+    font-weight: 600;
+}
+#qli{
+    position: absolute;
+    top: 40px;
 }

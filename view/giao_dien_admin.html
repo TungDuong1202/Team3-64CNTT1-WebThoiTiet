@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weathers</title>
+    <title>Thời tiết</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_gd.css">
 </head>
 <body>
     <div class="logout">
-        <a href="../model/logout.php">logout</a>
-        <a href="../controller/quan_ly_db.php">admin</a>
+        <button><a href="../model/logout.php">Đăng xuất</a></button>
+
+        <button id="qli"><a href="../controller/quan_ly_db.php">Hệ thống</a></button>
     </div>
     <div class="card">
         <div> 
@@ -47,6 +48,9 @@
 
    
     <script src="hieu_ung.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 
 </body>
 </html>

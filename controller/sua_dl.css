@@ -5,7 +5,7 @@
 }
 body{
     height: 100vh;
-    background:rgb(255, 255, 255);
+    background: #d7efff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
@@ -17,13 +17,14 @@ body{
 }
 .container{
     width: 500px;
-    background: transparent;
+    background: rgb(228, 243, 253);
     display: block;
     padding: 40px;  
     top: -50px;
     position: relative;
     align-items: center;
     border: 2px solid black;
+    box-shadow: 0 0 5px black;
 }
 label{
     font-size: 30px;
@@ -33,5 +34,6 @@ label{
     width: 60%;
     height: 35px;
     font-size: 20px;
+    background: rgb(236, 247, 255);
 }
 
