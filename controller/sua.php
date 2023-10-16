@@ -1,4 +1,4 @@
-   <link rel="stylesheet" href="sua_dl.css">
+   <link rel="stylesheet" href="style_sua.css">
    <?php
         session_start();
         ob_start();
@@ -34,9 +34,9 @@
         $rows = mysqli_fetch_array($qr);
     ?>
    <form action="" method="post" class="container">
-    <label>Username</label><input type="text" name="username" value="<?php echo $rows["username"]?>"/> <br/><br/>
-    <label>Email</label><input type="text" name="email" value="<?php echo $rows["email"]?>"/> <br/><br/>
-    <label>Role</label><input type="text" name="role" value="<?php echo $rows["role"]?>"/> <br/><br/>
+    <label>Tên đăng nhập</label><input type="text" name="username" value="<?php echo $rows["username"]?>"/> <br/><br/>
+    <label>Email  </label><input type="text" name="email" value="<?php echo $rows["email"]?>"/> <br/><br/>
+    <label>Vai trò</label><input type="text" name="role" value="<?php echo $rows["role"]?>"/> <br/><br/>
     <input type="submit" name="sua" value="Sửa">
     
 </form>
