@@ -22,19 +22,19 @@ async function checkWeather(cityy){
         value.innerText = Math.round((data.main.temp - 273.15)) + '°C'
 
         if(data.weather[0].main == "Clouds"){
-            shortDec.src = "img/clouds.png";
+            shortDec.src = "../model/img/clouds.png";
         }
         else if(data.weather[0].main == "Clear"){
-            shortDec.src = "img/clear.png";
+            shortDec.src = "../model/img/clear.png";
         }
         else if(data.weather[0].main == "Rain"){
-            shortDec.src ="img/rain.png";
+            shortDec.src ="../model/img/rain.png";
         }
         else if(data.weather[0].main == "Drizzle"){
-            shortDec.src = "img/drizzle.png";
+            shortDec.src = "../model/img/drizzle.png";
         }
         else if(data.weather[0].main == "Mist"){
-            shortDec.src = "img/mist.png";
+            shortDec.src = "../model/img/mist.png";
         }
         document.querySelector('.content').style.display = "block";
     }

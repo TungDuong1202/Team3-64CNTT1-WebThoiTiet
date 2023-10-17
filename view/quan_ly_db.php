@@ -9,14 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý cơ sở dữ liệu người dùng</title>
-    <link rel="stylesheet" href="style_qldl.css">
+    <link rel="stylesheet" href="../model/css/style_qldl.css">
 </head>
 <body>
     <?php
         if(isset($_SESSION['role']) && $_SESSION['role'] == 1){
             require "../model/database.php";
     }?>
-            <button><a href="../view/giao_dien_admin.html">Thoát</a></button>
+            <button><a href="giao_dien_admin.html">Thoát</a></button>
             <div class="chuthich">
                 <h3>Chú thích</h3>
                 <table border="1" align="center" class="chuthich-box">
@@ -43,7 +43,6 @@
                         <th>Id</th>
                         <th>Tên đăng nhập</th>
                         <th>Email</th>
-                        <th>Mật khẩu</th>
                         <th>Vai trò</th>
                         <th>Chức năng</th>
                     </tr>
@@ -58,9 +57,8 @@
                     <td><?php echo $rows["id"]; ?></td>
                     <td><?php echo $rows["username"]; ?></td>
                     <td><?php echo $rows["email"]; ?></td>
-                    <td><?php echo $rows["password"]; ?></td>
                     <td><?php echo $rows["role"]; ?></td>
-                    <td><a href="sua.php?id=<?php echo $rows['id']?>">Sửa </a>| <a href="xoa.php?id=<?php echo $rows['id']?>"> Xóa</td>
+                    <td><a href="../controller/sua.php?id=<?php echo $rows['id']?>">Sửa </a>| <a href="../controller/xoa.php?id=<?php echo $rows['id']?>"> Xóa</td>
                 </tr>
                 <?php } ?>
             </table>

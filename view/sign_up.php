@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí</title>
-    <link rel="stylesheet" href="style_signup.css" />
+    <link rel="stylesheet" href="../model/css/style_signup.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <h1>Đăng ký</h1> 
-        <form action="../model/process_signup.php" method="post">          
+        <form action="../controller/process_signup.php" method="post">          
             <div class="form-control">
                 <ion-icon name="person-circle-outline"></ion-icon>
                 <input id="tendangnhap" name="username" type="text" placeholder="Tên đăng nhập">

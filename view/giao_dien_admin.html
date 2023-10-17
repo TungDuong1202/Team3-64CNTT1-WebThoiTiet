@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thời tiết</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../model/css/style.css">
 </head>
 <body>
     <div class="logout">
-        <button><a href="../model/logout.php">Đăng xuất</a></button>
+        <button><a href="../controller/logout.php">Đăng xuất</a></button>
 
-        <button id="qli"><a href="../controller/quan_ly_db.php">Hệ thống</a></button>
+        <button id="qli"><a href="quan_ly_db.php">Hệ thống</a></button>
     </div>
     <div class="card">
         <div> 
@@ -28,7 +28,7 @@
             <div class="temperature">
                 <span class="value"> </span>
             </div>
-            <img src="img/clear.png" class="short-dec">
+            <img src="../model/img/clear.png" class="short-dec">
             <div class="more-dec">
                 <div class="visibility">
                     <i class="fa-solid fa-eye"></i>
@@ -47,7 +47,7 @@
     </div>
 
    
-    <script src="hieu_ung.js"></script>
+    <script src="../model/js/hieu_ung.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     

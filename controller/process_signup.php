@@ -31,7 +31,7 @@
         echo "Mật khẩu không được quá 50 ký tự.<br>";
         die ("Vui lòng nhập lại!");
     }
-    require 'database.php';
+    require '../model/database.php';
     $checkEmailQuery = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($checkEmailQuery);
     if ($result->num_rows > 0) {
@@ -44,7 +44,7 @@
     }
     $sql = "INSERT INTO users (`username`,`email`,`password`) values ('$user','$email','$pass')";
     if($conn->query($sql)===TRUE){
-        header("Location: signup_success.html");
+        header("Location: ../view/signup_success.html");
         exit();
     }else{
         echo "Loi {$sql}".$conn ->error;

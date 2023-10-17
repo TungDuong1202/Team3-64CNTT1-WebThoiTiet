@@ -75,7 +75,7 @@ ul li::before{
     position: absolute;
     height: 25px;
     width: 25px;
-    background-image: url(icon/unchecked.png);
+    background-image: url(../icon/unchecked.png);
     background-size: cover;                        /* tự động chỉnh background phù hợp với khung hình */
     background-position: center;
     top: 10px;
@@ -86,7 +86,7 @@ ul li.checked{
     text-decoration: line-through;
 }
 ul li.checked::before{
-    background-image: url(icon/checked.png);
+    background-image: url(../icon/checked.png);
 }
 ul li span{
     position: absolute;

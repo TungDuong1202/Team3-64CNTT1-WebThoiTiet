@@ -1,4 +1,4 @@
-   <link rel="stylesheet" href="style_sua.css">
+   <link rel="stylesheet" href="../model/css/style_sua.css">
    <?php
         session_start();
         ob_start();
@@ -21,10 +21,9 @@
             if($role == ""){echo "Vui lòng nhập quyền admin!<br>";}
 
             if($username != "" && $email != "" && $role != ""){
-                $connection = mysqli_connect("$host", "$username", "$password", "$dbname");
                 $sql = "UPDATE users set username = '$username', email = '$email', `role` = '$role' where id = $id";
                 $qr = mysqli_query($conn,$sql);
-                header("location: quan_ly_db.php");
+                header("location: ../view/quan_ly_db.php");
             }
         }
    ?>
